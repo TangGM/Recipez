@@ -34,7 +34,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fob-Az-iIx">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fob-Az-iIx">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="105.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="106" id="Ftu-AZ-NXw"/>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="1117" y="363"/>
         </scene>
-        <!--View Controller-->
+        <!--Create RecipeVC-->
         <scene sceneID="Cf1-Rj-MjT">
             <objects>
-                <viewController id="GOa-MF-uAj" sceneMemberID="viewController">
+                <viewController id="GOa-MF-uAj" customClass="CreateRecipeVC" customModule="recipez" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uDq-cO-vaf"/>
                         <viewControllerLayoutGuide type="bottom" id="or0-rU-82j"/>
@@ -135,6 +135,9 @@
                                 <state key="normal" title="Add Image">
                                     <color key="titleColor" red="0.99851895729999995" green="0.99851895729999995" blue="0.99851895729999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addImage:" destination="GOa-MF-uAj" eventType="touchUpInside" id="M95-J6-S6R"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izT-c2-7OM">
                                 <rect key="frame" x="235" y="489" width="131" height="30"/>
@@ -143,6 +146,9 @@
                                     <constraint firstAttribute="height" constant="30" id="nHK-5M-g8a"/>
                                 </constraints>
                                 <state key="normal" title="Create Recipe"/>
+                                <connections>
+                                    <action selector="createRecipe:" destination="GOa-MF-uAj" eventType="touchUpInside" id="IMg-Mt-nt2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -166,6 +172,13 @@
                             <constraint firstItem="iG9-jk-jEt" firstAttribute="leading" secondItem="Idf-XS-KzJ" secondAttribute="leadingMargin" id="zQ7-rs-P3r"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addRecipeBtn" destination="BaV-Gn-Vho" id="RNB-Kh-zNq"/>
+                        <outlet property="recipeImg" destination="96I-yf-aAL" id="75g-HY-R3r"/>
+                        <outlet property="recipeIngredients" destination="a23-rz-ZPE" id="gug-XB-KT5"/>
+                        <outlet property="recipeSteps" destination="mU2-I2-Hb7" id="QNt-5b-Oqs"/>
+                        <outlet property="recipeTitle" destination="iG9-jk-jEt" id="Mp0-fH-flg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9k-pu-pdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

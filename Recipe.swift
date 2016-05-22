@@ -23,5 +23,4 @@ class Recipe: NSManagedObject {
         return img
     }
 
-    
 }

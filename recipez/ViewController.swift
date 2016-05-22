@@ -14,16 +14,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     var recipes = [Recipe]()
     
-    // 要從coredata拿資料要有這個controller
-    var fetchedResultsController = NSFetchedResultsController!()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
     }
     
+    // 載入view之後重新抓資料
+    override func viewDidAppear(animated: Bool) {
+        fetchAndSetResults()
+        tableView.reloadData()
+    }
+    
+    // user coredata
     func fetchAndSetResults() {
         // UIApplication.sharedApplication().delegate 是 main delegate
         let app = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -31,13 +34,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let fetchRequest = NSFetchRequest(entityName: "Recipe")
         // maybe fail
         do {
-            let results = try context.executeRequest(fetchRequest)
+            let results = try context.executeFetchRequest(fetchRequest)
             self.recipes = results as! [Recipe]
-        } catch {
-            
+        } catch let err as NSError {
+            print (err.debugDescription)
         }
     }
-
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("RecipeCell") as? RecipeCell {

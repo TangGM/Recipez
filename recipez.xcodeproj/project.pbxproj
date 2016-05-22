@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E4906401CF1D11F00479FF6 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49063F1CF1D11F00479FF6 /* Recipe+CoreDataProperties.swift */; };
+		7E4906441CF2038000479FF6 /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4906431CF2038000479FF6 /* CreateRecipeVC.swift */; };
 		7E7E42111CF1C0C500CE0524 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E42101CF1C0C500CE0524 /* AppDelegate.swift */; };
 		7E7E42131CF1C0C500CE0524 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7E42121CF1C0C500CE0524 /* ViewController.swift */; };
 		7E7E42161CF1C0C500CE0524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E7E42141CF1C0C500CE0524 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		7E49063F1CF1D11F00479FF6 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7E4906431CF2038000479FF6 /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
 		7E7E420D1CF1C0C500CE0524 /* recipez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recipez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E7E42101CF1C0C500CE0524 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E7E42121CF1C0C500CE0524 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				7E7E42121CF1C0C500CE0524 /* ViewController.swift */,
+				7E4906431CF2038000479FF6 /* CreateRecipeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				7E7E42111CF1C0C500CE0524 /* AppDelegate.swift in Sources */,
 				7E7E422D1CF1CCDB00CE0524 /* RecipeCell.swift in Sources */,
 				7E4906401CF1D11F00479FF6 /* Recipe+CoreDataProperties.swift in Sources */,
+				7E4906441CF2038000479FF6 /* CreateRecipeVC.swift in Sources */,
 				7E7E42191CF1C0C500CE0524 /* recipez.xcdatamodeld in Sources */,
 				7E7E422B1CF1C9BF00CE0524 /* Recipe.swift in Sources */,
 			);
